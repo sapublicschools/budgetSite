@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>South Amboy 2017-2018 Budget</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">South Amboy 2017-2018 District Budget</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Revenue</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="appropriations.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Appropriations</span>
+          </a>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="taxBill.html">
+            <i class="fa fa-money"></i>
+            <span class="nav-link-text">Your Property Tax Bill</span>
+          </a>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="full.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Revenue: Detailed</span>
+          </a>
+        </li>
+        
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="appFull.html">
+            <i class="fa fa-money"></i>
+            <span class="nav-link-text">Appropriations: Detailed</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container-fluid"
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Charts</li>
+      </ol>
+
+
+      <div class="card mb-3">
+      <img src="images/saHeader.png">
+      </div>
+
+        <div class="page-header" style="text-align:center">
+          <h1> Budget Portal </h1>
+          <h5> <small>2017-2018</small> </h5>
+        </div>
+
+      <div class="col-lg-12">
+        <div class="card mb-3">
+          <div class="card-body">
+            <strong>Welcome!</strong> The purpose of this website is to provide an approachable and thorough introduction to the budget of South Amboy School District, a K-12 public school system that serves approximately 1200 students in pre-kindergarten through 12th grade. Official information from the Business Office can be found <a style="color:#42033D" href="http://www.sapublicschools.com/board_of_education/budget_info">here</a>, but this website serves as an introduction for those who are not familiar with school budgets and how they affect your local property tax bill.
+          </div>
+        </div>
+      </div>
+
+    <hr>
+
+        <div class="page-header" style="text-align:center">
+          <h1> Revenues </h1>
+          <h5> <small>2017-2018</small> </h5>
+        </div>
+
+        <div class="card mb-3">
+        
+          <div class ="card-body">
+            A budget is broken down into two sections: <strong>revenue</strong> and <strong>appropriations</strong>. We will start by describing each of these two sections in detail.
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="padding: 0 15px">
+
+        <div class="col-lg-6">
+          <!-- Example Bar Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i> 2017-2018 Revenues Chart</div>
+            <div class="card-body">
+            <p>The vast majority of our funding comes from two sources: <strong>State Aid</strong> and <strong>Local Tax Levy</strong>.</p>
+
+            <p>"Other" contains relatively small amounts of funding from various sources. If you're interested in finding out exactly what falls in this category and a more detailed view of revenues, you can find out <a href="full.html" style="color:#42033D">here</a>. </p>
+
+              <canvas id="revenueChart" width="100%" height="100"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+        <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> 2017-2018 Revenues Table </div>
+        <div class="card-body">
+          <p> This is the same information presented in the previous chart, but compares it to last year. Notice that <strong>State Aid</strong> remained constant, while the <strong>Local Tax Levy</strong> increased by 2%. This is the section of the budget that is funded by annual property taxes. You may have heard of a <strong>"Tax Cap"</strong> - this refers to the <a style="float:right; color:#42033D" href="http://www.nytimes.com/2010/07/13/nyregion/13taxes.html">law in New Jersey</a> which states that local government entitites like school districts can only increase the annual tax levy by 2%.</p> 
+          <p> However, notice that it is <strong>not</strong> a 2% increase on the district budget but rather a 2% increase on one section of the budget. Even with this 2% increase, you can see that our budget is slightly lower than last year's because of decreases in other sources of state and federal funding. For a more detailed view, click <a href="full.html" style="color:#42033D">here</a>. </p>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>2016-2017</th>
+                  <th>2017-2018</th>
+                  <th>Percent Increase</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Total Budget</th>
+                  <th>$16,351,338</th>
+                  <th>$16,242,777</th>
+                  <th>-0.66%</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>State Aid</td>
+                  <td>$6,627,860</td>
+                  <td>$6,627,860</td>
+                  <td>0%</td>
+                </tr>
+                <tr>
+                  <td>Local Tax Levy</td>
+                  <td>$9,125,016</td>
+                  <td>$9,307,516</td>
+                  <td>2.00%</td>
+                </tr>
+                <tr>
+                  <td>Other</td>
+                  <td>$598,462</td>
+                  <td>$307,401</td>
+                  <td>-48.63%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="col-lg-12">
+    <div class="card mb-3">
+        
+      <div class ="card-body">
+        <p>We might want to say something important about revenues here. Maybe even include another chart. Who knows. This is mainly just sample text so we know what an extra paragraph will look like. What did you say? I'll say it again: this is mainly just sample text so we know what an extra paragraph will look like</p>
+
+      <a style="float:right; color:#42033D" href="appropriations.html">Next Page: Appropriations <i class="fa fa-arrow-right" style="font-size: 30px;"></i> </a>
+
+      </div>
+    </div>
+    </div>
+
+    </div>
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-pie-chart"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-charts.js"></script>
+  </div>
+</body>
+
+</html>

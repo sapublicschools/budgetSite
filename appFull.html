@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>South Amboy 2017-2018 Budget</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">South Amboy 2017-2018 Budget</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Charts</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Tables</span>
+          </a>
+        </li>
+        
+        
+        
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container-fluid"
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Charts</li>
+      </ol>
+
+
+      <div class="card mb-3">
+      <img src="images/saHeader.png">
+      </div>
+
+        <div class="page-header" style="text-align:center">
+          <h1> Budget Portal </h1>
+          <h5> <small>2017-2018</small> </h5>
+        </div>
+
+      <div class="col-lg-12">
+        <div class="card mb-3">
+          <div class="card-body">
+            <strong>Welcome!</strong> The purpose of this website is to provide an approachable and thorough introduction to the budget of South Amboy School District, a K-12 public school system that serves approximately 1200 students in pre-kindergarten through 12th grade. Official information can be found <a style="color:#42033D" href="http://www.sapublicschools.com/board_of_education/budget_info">here</a>, but this website serves as an introduction for those who are not familiar with budgets in general.
+          </div>
+        </div>
+      </div>
+
+    <hr>
+
+        <div class="page-header" style="text-align:center">
+          <h1> Appropriations: Detailed View </h1>
+          <h5> <small>2017-2018</small> </h5>
+        </div>
+
+        <div class="card mb-3">
+        
+          <div class ="card-body">
+            Here is the detailed view for appropriations. The chart and table below will be more complicated. To view a condensed version, you can return <a style="color:#42033D" href="appropriations.html">here</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="padding: 0 15px">
+
+        <div class="col-lg-6">
+          <!-- Example Bar Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i> 2017-2018 Revenues Chart</div>
+            <div class="card-body">
+            <p>The vast majority of our funding comes from two sources: <strong>State Aid</strong> and <strong>Local Tax Levy</strong>.</p>
+
+            <p>"Other" contains relatively small amounts of funding from various sources. If you're interested in finding out exactly what falls in this category, you can find out <a href="full.html" style="color:#42033D">here</a>. </p>
+
+              <canvas id="myBarChart" width="100%" height="100"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+        </div>
+
+                <div class="col-lg-6">
+                <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> 2017-2018 Revenues Table </div>
+        <div class="card-body">
+          <p> This is the same information presented in the previous chart, but compares it to last year. Notice that <strong>State Aid</strong> remained constant, while the <strong>Local Tax Levy</strong> increased by 2%. This is the section of the budget that is funded by annual property taxes.</p> 
+          <p>However, notice that it is <strong>not</strong> a 2% increase on the district budget but rather a 2% increase on one section of the budget.</p>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>2016-2017</th>
+                  <th>2017-2018</th>
+                  <th>Percent Increase</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Total Budget</th>
+                  <th>$16,351,338</th>
+                  <th>$16,242,777</th>
+                  <th>-0.66%</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>Instruction</td>
+                  <td>$4,929,121</td>
+                  <td>$4,954,801</td>
+                  <td>0.52%</td>
+                </tr>
+                <tr>
+                  <td>Special Education</td>
+                  <td>$1,439,583</td>
+                  <td>$1,468,024</td>
+                  <td>1.98%</td>
+                </tr>
+                <tr>
+                  <td>After-School Activities</td>
+                  <td>$256,084</td>
+                  <td>$286,662</td>
+                  <td>11.94%</td>
+                </tr>
+                <tr>
+                  <td>Out-of-District Tuition</td>
+                  <td>$2,335,170</td>
+                  <td>$2.159,741</td>
+                  <td>-7.51%</td>
+                </tr>
+                <tr>
+                  <td>Support Services</td>
+                  <td>$1,401,564</td>
+                  <td>$1,312,139</td>
+                  <td>-6.38%%</td>
+                </tr>
+                <tr>
+                  <td>Administrative Costs</td>
+                  <td>$1,603,335</td>
+                  <td>$1,570,600</td>
+                  <td>-2.04%</td>
+                </tr>
+                <tr>
+                  <td>Custodial / Maintenance</td>
+                  <td>$1,032,082</td>
+                  <td>$992,717</td>
+                  <td>-3.81%</td>
+                </tr>
+                <tr>
+                  <td>Transportation</td>
+                  <td>$744,988</td>
+                  <td>$884,158</td>
+                  <td>13.31%</td>
+                </tr>
+                <tr>
+                  <td>Benefits</td>
+                  <td>$2,574,673</td>
+                  <td>$2,628,192</td>
+                  <td>2.08%</td>
+                </tr>
+                <tr>
+                  <td>Capital Outlay</td>
+                  <td>$1330</td>
+                  <td>$1330</td>
+                  <td>0%</td>
+                </tr>
+                <tr>
+                  <td>Charter School Tuition</td>
+                  <td>$33,408</td>
+                  <td>$24,413</td>
+                  <td>-26.92%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>
+
+        
+    </div>
+
+
+    
+    <div class="card mb-3">
+        
+      <div class ="card-body">
+        <p>A budget is broken down into two sections: <strong>revenue</strong> and <strong>appropriations</strong>. We will start by describing each of these two sections in detail. A budget is broken down into two sections: <strong>revenue</strong> and <strong>appropriations</strong>. We will start by describing each of these two sections in detail. A budget is broken down into two sections: <strong>revenue</strong> and <strong>appropriations</strong>. We will start by describing each of these two sections in detaildsfasdfasdf</p>
+
+      <a style="float:right; color:#42033D" href="appropriations.html">Next Page: Appropriations <i class="fa fa-arrow-right" style="font-size: 30px;"></i> </a>
+    </div>
+
+    </div>
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-pie-chart"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-charts-appFull.js"></script>
+  </div>
+</body>
+
+</html>
